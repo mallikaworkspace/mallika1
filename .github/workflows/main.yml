@@ -27,3 +27,12 @@ jobs:
  
     - name: Run tests
       run: python hello.py
+
+  Environment_Variables:
+    runs-on: ubuntu-latest
+    env:
+      First_var: "2330"
+      Second_var: "3023"
+    steps:
+    - name: Print Second environment Variable
+      run: echo "Second_variable:-->> ${{ env.Second_var }}"
